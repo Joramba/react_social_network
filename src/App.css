@@ -11,38 +11,3 @@
     "nav content";
 }
 
-.header {
-  grid-area: header;
-  background-color: green;
-  border-radius: 15px;
-}
-
-.header img {
-  width: 50px;
-}
-
-.nav {
-  grid-area: nav;
-  background-color: rgb(236, 182, 81);
-  border-radius: 15px;
-}
-
-.nav ul {
-  padding: 20px 40px;
-}
-
-.nav ul li a{
-  color: white;
-  text-decoration: none;
-}
-
-.content {
-  grid-area: content;
-  background-color: blue;
-  border-radius: 15px;
-}
-
-
-ul li {
-  list-style-type: none;
-}
