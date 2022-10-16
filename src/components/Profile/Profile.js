@@ -1,9 +1,9 @@
-import styles from './Profile.module.css';
+import './Profile.css';
 import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
     return (
-        <div className={styles.content}>
+        <div>
             <div>
                 <img src="https://img1.goodfon.com/original/1280x720/9/6f/minimalizm-gradient-background.jpg" alt="Back" />
             </div>

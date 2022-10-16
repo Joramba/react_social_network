@@ -1,4 +1,4 @@
-import styles from './MyPosts.module.css';
+import './MyPosts.css';
 import Post from './Post/Post';
 
 const MyPosts = () => {
@@ -12,7 +12,7 @@ const MyPosts = () => {
             </div>
             <div>
                 New Posts
-                <div className={styles.posts}>
+                <div className="posts">
                     <Post message="Hi, how are u?" />
                     <Post message="It's my first post" />
                 </div>

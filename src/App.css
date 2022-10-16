@@ -11,3 +11,8 @@
     "nav content";
 }
 
+.app-wrapper-content {
+  grid-area: content;
+  background-color: #26a69a;
+  border-radius: 15px;
+}

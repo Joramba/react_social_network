@@ -1,9 +1,9 @@
-import styles from "./Header.module.css";
+import "./Header.css";
 
 
 const Header = () => {
     return (
-        <header className={styles.header}>
+        <header className="header">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/SVG_Logo.svg/2048px-SVG_Logo.svg.png" alt="Logo" />
         </header>
     )

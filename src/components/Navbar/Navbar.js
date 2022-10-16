@@ -1,17 +1,21 @@
-import classes from './Navbar.module.css';
+import './Navbar.css';
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faMessage, faNewspaper, faMusic, faGear } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
     return (
-        <nav className={classes.nav}>
+        <nav className="nav">
             <ul>
-                <li className={classes.item + " " + classes.active}><a href="!#">Profile</a></li>
-                <li className={classes.item}><a href="!#">Messages</a></li>
-                <li className={classes.item}><a href="!#">News</a></li>
-                <li className={classes.item}><a href="!#">Music</a></li>
-                <li className={classes.item}><a href="!#">Settings</a></li>
+                <li className="category"> Navigation</li>
+                <li className="nav_item"> <NavLink to="/profile"><FontAwesomeIcon icon={faUser} /><span>Profile</span></NavLink></li>
+                <li className="nav_item"><NavLink to="/dialogs"><FontAwesomeIcon icon={faMessage} /><span>Messages</span></NavLink></li>
+                <li className="nav_item"><NavLink to="/news"><FontAwesomeIcon icon={faNewspaper} /><span>News</span></NavLink></li>
+                <li className="nav_item"><NavLink to="/music"><FontAwesomeIcon icon={faMusic} /><span>Music</span></NavLink></li>
+                <li className="nav_item"><NavLink to="/settings"><FontAwesomeIcon icon={faGear} /><span>Settings</span></NavLink></li>
             </ul>
         </nav>
     )
 }
-    
+
 export default Navbar;
