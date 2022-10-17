@@ -7,10 +7,27 @@
     padding: 10px;
 }
 
+.dialogs_name {
+    margin: 20px;
+}
+
 .dialogs_name a {
     text-decoration: none;
     color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
 }
+
+
+.dialogs_name img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
 
 .dialogs_name a:hover {
     color: #757575;
@@ -26,4 +43,21 @@
 
 .dialogs_message {
     color: white;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+
+.user {
+    flex-direction: row;
+}
+
+
+.dialogs_message img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }

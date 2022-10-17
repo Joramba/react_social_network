@@ -11,7 +11,7 @@ const MyPosts = (props) => {
             </div>
             <div className="new_posts">New Posts</div>
             <div className="posts">
-                {props.postData.map(post =>
+                {props.postsData.map(post =>
                     <Post key={post.id} message={post.message} likesCount={post.likesCount} />
                 )}
             </div>

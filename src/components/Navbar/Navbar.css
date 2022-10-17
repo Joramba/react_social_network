@@ -38,10 +38,34 @@
 .nav_item a.active {
   color: white;
 }
+
 .nav_item a.active:hover {
-  color:white;
+  color: white;
 }
 
 .nav_item a:hover {
+  color: white;
+}
+
+.friends {
+  padding-top: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.friend {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.friend img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.friend_name {
   color: white;
 }
