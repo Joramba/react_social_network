@@ -7,10 +7,23 @@
     padding: 10px;
 }
 
+.dialogs_name a {
+    text-decoration: none;
+    color: white;
+}
+
+.dialogs_name a:hover {
+    color: #757575;
+}
+
 .dialogs_messages {
     padding: 10px;
 }
 
-.dialogs_names .active {
+.dialogs_names .active a {
     color: gold;
+}
+
+.dialogs_message {
+    color: white;
 }

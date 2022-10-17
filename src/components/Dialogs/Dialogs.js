@@ -1,38 +1,19 @@
 import './Dialogs.css';
+import DialogItem from './DialogItem/DialogItem';
+import Message from './Message/Message';
 
 const Dialogs = (props) => {
     return (
         <div className='dialogs'>
             <div className="dialogs_names">
-                <div className="dialogs_name active">
-                    Andrew
-                </div>
-                <div className="dialogs_name">
-                    Georgiu
-                </div>
-                <div className="dialogs_name">
-                    Maksim
-                </div>
-                <div className="dialogs_name">
-                    Victor
-                </div>
-                <div className="dialogs_name">
-                    Jakub
-                </div>
-                <div className="dialogs_name">
-                    Alex
-                </div>
+                {props.dialogsData.map(dialog =>
+                    <DialogItem key={dialog.id} name={dialog.name} />
+                )}
             </div>
             <div className="dialogs_messages">
-                <div className="dialogs_message">
-                    Hello!
-                </div>
-                <div className="dialogs_message">
-                    How are u?
-                </div>
-                <div className="dialogs_message">
-                    YUooooo
-                </div>
+                {props.messagesData.map(item =>
+                    <Message key={item.id} message={item.message} />
+                )}
             </div>
         </div>
     )

@@ -1,17 +1,12 @@
 import './Profile.css';
 import MyPosts from './MyPosts/MyPosts';
+import PrifileInfo from './ProfileInfo/ProfileInfo';
 
-const Profile = () => {
+const Profile = (props) => {
     return (
-        <div>
-            <div>
-                <img src="https://img1.goodfon.com/original/1280x720/9/6f/minimalizm-gradient-background.jpg" alt="Back" />
-            </div>
-            <div>
-                ava + desc
-            </div>
-            <MyPosts />
-            Main content
+        <div className='profile'>
+            <PrifileInfo />
+            <MyPosts postData={props.postData} />
         </div>
     )
 }
