@@ -34,6 +34,11 @@
 }
 
 .dialogs_messages {
+    background-color: #232323;
+    border: 2px solid white;
+}
+Ы
+.dialogs_messages {
     padding: 10px;
 }
 
@@ -42,6 +47,7 @@
 }
 
 .dialogs_message {
+    padding: 5px 20px;
     color: white;
     display: flex;
     flex-flow: row-reverse nowrap;

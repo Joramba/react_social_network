@@ -15,7 +15,6 @@ const Friend = (props) => {
 };
 
 const Navbar = (props) => {
-    console.log(props.friends.friendslist)
     return (
         <nav className="nav">
             <ul>
