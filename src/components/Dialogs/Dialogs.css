@@ -36,10 +36,21 @@
 .dialogs_messages {
     background-color: #232323;
     border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-Ы
+
 .dialogs_messages {
-    padding: 10px;
+    padding: 10px 3px;
+}
+
+.dialogs_messages textarea {
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    font-size: 18px;
 }
 
 .dialogs_names .active a {

@@ -5,3 +5,7 @@
 .posts {
     margin-top: 10px;
 }
+
+.post_data textarea {
+    font-size: 18px;
+}
