@@ -33,6 +33,14 @@
     color: #757575;
 }
 
+.messages {
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 .dialogs_messages {
     background-color: #232323;
     border: 2px solid white;
