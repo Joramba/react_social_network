@@ -1,52 +1,59 @@
-import { rerenderEntireTree } from './../render';
+const store = {
+    _state: {
+        profilePage: {
+            postsData: [
+                { id: 1, message: "Hi, how are u?", likesCount: 12 },
+                { id: 2, message: "It's my first post", likesCount: 21 },
+                { id: 3, message: "Abrakadarawe", likesCount: 2321 },
+                { id: 4, message: "TRRRRRRRRRRRRRRRRRRRR", likesCount: 32 },
+            ],
+            newPostText: '',
+        },
+        dialogsPage: {
+            messagesData: [
+                { id: 1, message: 'Hello', from: 'me' },
+                { id: 2, message: 'How are u?!', from: 'me' },
+                { id: 3, message: 'YUooooo!', from: 'user' },
+            ],
+            dialogsData: [
+                { id: 1, name: 'Andrew' },
+                { id: 2, name: 'Jakub' },
+                { id: 3, name: 'Georgiu' },
+                { id: 4, name: 'Maksim' },
+                { id: 5, name: 'Victor' },
+                { id: 6, name: 'Alex' },
+            ]
+        },
+        sitebar: {
+            friendslist: [
+                { id: 1, name: 'Andrew' },
+                { id: 2, name: 'Georgiu' },
+                { id: 3, name: 'Victor' },
+            ]
+        }
+    },
+    getState() {
+        return this._state;
+    },
+    _callSubscriber() {
+        console.log('State is changed');
+    },
+    addPost() {
+        const newPost = {
+            id: 5, message: this._state.profilePage.newPostText, likesCount: 2421421
+        };
 
-let state = {
-    profilePage: {
-        postsData: [
-            { id: 1, message: "Hi, how are u?", likesCount: 12 },
-            { id: 2, message: "It's my first post", likesCount: 21 },
-            { id: 3, message: "Abrakadarawe", likesCount: 2321 },
-            { id: 4, message: "TRRRRRRRRRRRRRRRRRRRR", likesCount: 32 },
-        ],
-        newPostText: 'it-test',
+        this._state.profilePage.postsData.push(newPost);
+        this._callSubscriber(this._state);
     },
-    dialogsPage: {
-        messagesData: [
-            { id: 1, message: 'Hello', from: 'me' },
-            { id: 2, message: 'How are u?!', from: 'me' },
-            { id: 3, message: 'YUooooo!', from: 'user' },
-        ],
-        dialogsData: [
-            { id: 1, name: 'Andrew' },
-            { id: 2, name: 'Jakub' },
-            { id: 3, name: 'Georgiu' },
-            { id: 4, name: 'Maksim' },
-            { id: 5, name: 'Victor' },
-            { id: 6, name: 'Alex' },
-        ]
+    updateNewPostText(newText) {
+        this._state.profilePage.newPostText = newText;
+        this._callSubscriber(this._state);
     },
-    sitebar: {
-        friendslist: [
-            { id: 1, name: 'Andrew' },
-            { id: 2, name: 'Georgiu' },
-            { id: 3, name: 'Victor' },
-        ]
+    subscibe(observer) {
+        this._callSubscriber = observer;
     }
 }
 
-export const addPost = () => {
-    const newPost = {
-        id: 5, message: state.profilePage.newPostText, likesCount: 2421421
-    };
+export default store;
 
-    state.profilePage.postsData.push(newPost);
-    rerenderEntireTree(state);
-}
-
-export const updateNewPostText = (newText) => {
-    state.profilePage.newPostText = newText;
-    rerenderEntireTree(state);
-}
-
-
-export default state;
